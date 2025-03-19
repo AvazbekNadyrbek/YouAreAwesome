@@ -15,10 +15,12 @@ struct ContentView: View {
                 .font(.largeTitle)
                 .fontWeight(.thin)
                 .foregroundStyle(.blue)
-            Text("I am a developer using a Swift API and SwiftUI")
+            Text("I am a developer using a Swift API and SwiftUI and and starting to learn not give up!")
                 .font(.subheadline)
                 .fontWeight(.thin)
+                .multilineTextAlignment(.center)
                 .foregroundStyle(.gray)
+                
 
             HStack {
                 Image(systemName: "figure.australian.football")
