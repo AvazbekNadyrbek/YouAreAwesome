@@ -10,39 +10,50 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var message = "I am a Programmer from Kyrgzstan"
+    @State private var image = ""
     
     var body: some View {
         
         VStack {
-            Text("You are awesome!")
+            Text("What's so funny about? ")
                 .font(.largeTitle)
-                .fontWeight(.thin)
-                .foregroundStyle(.blue)
-            Text("\(message) using a Swift API and SwiftUI and and starting to learn not give up!")
-                .font(.subheadline)
-                .fontWeight(.thin)
+                .foregroundStyle(.purple)
+                .fontWeight(.black)
                 .multilineTextAlignment(.center)
-                .foregroundStyle(.gray)
-                
-
-            HStack {
-                Image(systemName: "figure.australian.football")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundStyle(.purple)
-                Image(systemName: "swift")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundStyle(.orange)
-                Image(systemName: "figure.american.football")
-                    .resizable()
-                    .scaledToFit()
-                    .foregroundStyle(.green)
-            }
             
-            Button("Click me") {
-                message = "Hey hello from Kyrgzstan!"
+            Spacer()
+            Image(systemName: "\(image)")
+                    .resizable()
+                    .scaledToFit()
+                    .foregroundStyle(.black)
+                    .frame(width: 300, height: 300)
+            
+            Text("\(message)")
+                .font(.largeTitle)
+                .fontWeight(.black)
+                .foregroundStyle(.purple)
+                .multilineTextAlignment(.center)
+              
+            
+            Spacer()
+            
+            HStack {
+                Button("Peace") {
+                    message = "Peace"
+                    image = "peacesign"
+                }
+                Button("Love") {
+                    message = "Love"
+                    image = "heart"
+                }
+                Button("Undertstanding") {
+                    message = "Understanding"
+                    image = "lamp.table"
+                }
             }
+            .buttonStyle(.borderedProminent)
+            .font(.title2)
+            .tint(.purple)
         }
         // New Stuff Here
         .padding()
